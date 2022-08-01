@@ -6,7 +6,12 @@ import React from "react";
 function Footer() {
   return (
     <div className="bg-cream">
-      <Stack direction="column" justifyContent="center" spacing={1}>
+      <Stack
+        direction="column"
+        justifyContent="center"
+        spacing={1}
+        sx={{ marginRight: "2.5rem" }}
+      >
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -17,7 +22,7 @@ function Footer() {
               <EmailRounded /> kevalin.1246@gmail.com
             </span>
           </button>
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" spacing={2}>
             <a href="https://github.com/Ryyyyyy12" className="text-black">
               <span className="transition duration-300 ease-in-out hover:text-red">
                 <GitHub />

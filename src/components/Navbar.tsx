@@ -26,28 +26,28 @@ const Navbar = () => {
         <Stack direction="row" spacing={2}>
           <button>
             <Link to="#home" smooth className="no-underline text-black">
-              <p className="m-1 font-semibold text-xl transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
+              <p className="m-1 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
                 Home
               </p>
             </Link>
           </button>
           <button>
             <Link to="#about" smooth className="no-underline text-black">
-              <p className="m-1 font-semibold text-xl transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
+              <p className="m-1 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
                 About
               </p>
             </Link>
           </button>
           <button>
             <Link to="#project" smooth className="no-underline text-black">
-              <p className="m-1 font-semibold text-xl transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
+              <p className="m-1 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
                 Projects
               </p>
             </Link>
           </button>
           <button>
             <Link to="#contact" smooth className="no-underline text-black">
-              <p className="m-1 font-semibold text-xl transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
+              <p className="m-1 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
                 Contact
               </p>
             </Link>

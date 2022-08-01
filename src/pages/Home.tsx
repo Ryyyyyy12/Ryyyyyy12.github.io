@@ -16,8 +16,8 @@ function Home() {
         alignItems="center"
         spacing={3}
       >
-        <h1 className="text-6xl">Kevalin Srisakulpong</h1>
-        <p className="text-lg italic">
+        <h1 className="text-5xl">Kevalin Srisakulpong</h1>
+        <p className="text-base italic">
           Welcome to my online portfolio website :)
         </p>
         <Link to="#about" smooth className="text-black">

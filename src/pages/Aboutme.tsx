@@ -8,6 +8,7 @@ function Aboutme() {
     <div className="bg-gradient-to-b from-transparent to-cream" id="about">
       <div className="container flex justify-center content-center">
         <Stack>
+          <Box sx={{ height: "12rem" }} />
           <div className="container flex justify-center content-center">
             <Grid
               spacing={3}
@@ -19,13 +20,13 @@ function Aboutme() {
                 <div className="container flex justify-center content-center">
                   <img
                     src="/assets/images/profileimg.jpg"
-                    className="w-96 rounded-full shadow-2xl"
+                    className="w-72 rounded-full shadow-2xl"
                   ></img>
                 </div>
               </Grid>
-              <Grid item xs={10} md={8}>
+              <Grid item xs={10} md={6}>
                 <div className="m-2 container flex justify-center content-center">
-                  <p className="text-xl font-semibold indent-8 leading-relaxed ">
+                  <p className="text-base font-semibold indent-8 leading-relaxed ">
                     Hello! My name is{" "}
                     <span className="text-purple underline decoration-purple decoration-4">
                       Kevalin Srisakulpong
@@ -51,24 +52,24 @@ function Aboutme() {
               justifyContent="center"
               alignItems="start"
             >
-              <Grid item xs={10} md={4}>
-                <h3 className="m-3" style={{ fontFamily: "Kanit" }}>
+              <Grid item xs={10} md={3}>
+                <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
                   Technical Skills
-                </h3>
+                </h4>
                 <LogoList props={SKILLS} />
               </Grid>
 
-              <Grid item xs={10} md={4}>
-                <h3 className="m-3" style={{ fontFamily: "Kanit" }}>
+              <Grid item xs={10} md={3}>
+                <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
                   Tools
-                </h3>
+                </h4>
                 <LogoList props={TOOLS} />
               </Grid>
 
-              <Grid item xs={10} md={4}>
-                <h3 className="m-3" style={{ fontFamily: "Kanit" }}>
+              <Grid item xs={10} md={3}>
+                <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
                   Frameworks
-                </h3>
+                </h4>
                 <LogoList props={FRAMEWORKS} />
               </Grid>
             </Grid>

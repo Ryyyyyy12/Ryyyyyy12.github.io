@@ -4,10 +4,10 @@ function Projects() {
   return (
     <div className="bg-cream" style={{ height: "100vh" }} id="project">
       <div className="container flex justify-start content-center">
-        <h1>Projects</h1>
+        <h2>Projects</h2>
       </div>
       <div className="rainbow flex justify-center align-items-center">
-        <h1 className="text-white">Coming soon...</h1>
+        <h2 className="text-white">Coming soon...</h2>
       </div>
     </div>
   );
