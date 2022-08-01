@@ -52,21 +52,21 @@ function Aboutme() {
               justifyContent="center"
               alignItems="start"
             >
-              <Grid item xs={10} md={3}>
+              <Grid item xs={10} md={4} lg={3}>
                 <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
                   Technical Skills
                 </h4>
                 <LogoList props={SKILLS} />
               </Grid>
 
-              <Grid item xs={10} md={3}>
+              <Grid item xs={10} md={4} lg={3}>
                 <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
                   Tools
                 </h4>
                 <LogoList props={TOOLS} />
               </Grid>
 
-              <Grid item xs={10} md={3}>
+              <Grid item xs={10} md={4} lg={3}>
                 <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
                   Frameworks
                 </h4>

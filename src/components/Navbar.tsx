@@ -22,7 +22,10 @@ const Navbar = () => {
         alignItems="center"
         spacing={2}
       >
-        <h1 className="ml-5">🍒</h1>
+        <img
+          src="https://images.emojiterra.com/mozilla/512px/1f352.png"
+          className="w-8 ml-2"
+        />
         <Stack direction="row" spacing={2}>
           <button>
             <Link to="#home" smooth className="no-underline text-black">

@@ -44,7 +44,7 @@ function Footer() {
           </Stack>
         </Stack>
         <div className="flex justify-center">
-          <p>
+          <p className="text-center">
             {" "}
             &copy; 2022 All rights reserved{" "}
             <span className="italic text-red">

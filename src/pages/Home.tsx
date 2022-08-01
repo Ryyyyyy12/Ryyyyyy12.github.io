@@ -21,8 +21,8 @@ function Home() {
           Welcome to my online portfolio website :)
         </p>
         <Link to="#about" smooth className="text-black">
-          <button className="rounded-lg border-2 border-dashed border-red w-40 h-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 hover:text-white">
-            Reach out!
+          <button className="rounded-lg border-2 border-dashed border-red w-36 h-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 hover:text-white">
+            <p className="text-sm mt-1">Reach out!</p>
           </button>
         </Link>
       </Stack>

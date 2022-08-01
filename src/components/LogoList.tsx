@@ -23,7 +23,7 @@ function LogoList({ props }: any) {
               <BootstrapTooltip title={el.name}>
                 <img
                   src={el.logo}
-                  className="w-16 transition duration-300 ease-in-out hover:scale-125"
+                  className="w-12 transition duration-300 ease-in-out hover:scale-125"
                 ></img>
               </BootstrapTooltip>
             </Grid>
