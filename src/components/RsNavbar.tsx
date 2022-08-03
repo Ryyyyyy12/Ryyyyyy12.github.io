@@ -20,14 +20,6 @@ function RsNavbar() {
       </button>
       <div>
         <ul className={isExpanded ? "navExpanded" : "navNotEx"}>
-          <Link to="#home" smooth className="no-underline text-black">
-            <li className="m-2 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
-              <a onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}>
-                Home
-              </a>
-            </li>
-          </Link>
-
           <Link to="#about" smooth className="no-underline text-black">
             <li className="m-2 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
               <a onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}>
@@ -51,6 +43,16 @@ function RsNavbar() {
               </a>
             </li>
           </Link>
+
+          <a
+            href=""
+            onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
+            className="no-underline"
+          >
+            <li className="text-green m-2 font-semibold text-base transition ease-in-out hover:text-purple duration-100">
+              Resume
+            </li>
+          </a>
         </ul>
       </div>
     </nav>

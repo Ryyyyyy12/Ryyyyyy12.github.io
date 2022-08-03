@@ -8,7 +8,7 @@ function Aboutme() {
     <div className="bg-gradient-to-b from-transparent to-cream" id="about">
       <div className="container flex justify-center content-center">
         <Stack>
-          <Box sx={{ height: "12rem" }} />
+          <Box sx={{ height: "10rem" }} />
           <div className="container flex justify-center content-center">
             <Grid
               spacing={3}
