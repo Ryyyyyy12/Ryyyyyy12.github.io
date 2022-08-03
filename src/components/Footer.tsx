@@ -5,45 +5,43 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-cream">
+    <div className="bg-cream w-screen">
       <Stack
         direction="column"
         justifyContent="center"
         spacing={1}
-        sx={{ marginRight: "2.5rem" }}
+        sx={{ padding: "0.5rem", paddingTop: "1rem" }}
       >
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          sx={{ padding: "1rem 2rem 0.5rem 2rem" }}
-        >
-          <button className="text-black no-underline">
+        <Stack direction="row" justifyContent="center" spacing={2}>
+          <a className="hidden md:inline text-black no-underline">
             <span className="transition duration-300 ease-in-out hover:text-red">
-              <EmailRounded /> kevalin.1246@gmail.com
+              <EmailRounded /> <p className="inline">kevalin.1246@gmail.com</p>
             </span>
-          </button>
-          <Stack direction="row" spacing={2}>
-            <a href="https://github.com/Ryyyyyy12" className="text-black">
-              <span className="transition duration-300 ease-in-out hover:text-red">
-                <GitHub />
-              </span>
-            </a>
-            <a
-              href="https://www.instagram.com/ksryyyyyy_/"
-              className="text-black"
-            >
-              <span className="transition duration-300 ease-in-out hover:text-red">
-                <Instagram />
-              </span>
-            </a>
-            <a href="" className="text-black">
-              <span className="transition duration-300 ease-in-out hover:text-red">
-                <LinkedIn />
-              </span>
-            </a>
-          </Stack>
+          </a>
+
+          <a href="https://github.com/Ryyyyyy12" className="text-black">
+            <span className="transition duration-300 ease-in-out hover:text-red">
+              <GitHub />
+            </span>
+          </a>
+          <a
+            href="https://www.instagram.com/ksryyyyyy_/"
+            className="text-black"
+          >
+            <span className="transition duration-300 ease-in-out hover:text-red">
+              <Instagram />
+            </span>
+          </a>
+          <a href="" className="text-black">
+            <span className="transition duration-300 ease-in-out hover:text-red">
+              <LinkedIn />
+            </span>
+          </a>
         </Stack>
-        <div className="flex justify-center">
+        <div className="md:hidden">
+          <p className="text-center">kevalin.1246@gmail.com</p>
+        </div>
+        <div>
           <p className="text-center">
             {" "}
             &copy; 2022 All rights reserved{" "}
