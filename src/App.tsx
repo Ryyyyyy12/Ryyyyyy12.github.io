@@ -9,12 +9,14 @@ import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 import UpButton from "./components/UpButton";
 import Contact from "./pages/Contact";
+import RsNavbar from "./components/RsNavbar";
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
+        <RsNavbar />
+
         <Home />
         <Aboutme />
         <Projects />

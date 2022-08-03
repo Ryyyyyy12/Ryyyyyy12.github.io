@@ -1,0 +1,18 @@
+.navExpanded {
+  display: block;
+  position: absolute;
+  width: calc(100% - 120px);
+  text-align: right;
+  margin-top: 2rem;
+}
+.navNotEx {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navNotEx {
+    display: flex;
+    position: absolute;
+    margin-right: 5rem;
+    right: 0;
+  }
+}
