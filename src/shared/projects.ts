@@ -1,3 +1,7 @@
-export const PROJ = [
-  { id: 0, year: 1, title: "", description: "", file: "", preImg: "" },
+export const DEV = [
+  { id: 0, title: "", description: "", link: "", preImg: "", tools: ["", ""] },
+];
+
+export const ART = [
+  { id: 0, title: "", description: "", img: "", date: "", tools: [""] },
 ];

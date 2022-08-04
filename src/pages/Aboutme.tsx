@@ -5,10 +5,10 @@ import UpButton from "../components/UpButton";
 
 function Aboutme() {
   return (
-    <div className="bg-gradient-to-b from-transparent to-cream" id="about">
+    <div className="bg-gradient-to-b from-transparent to-cream">
       <div className="container flex justify-center content-center">
         <Stack>
-          <Box sx={{ height: "10rem" }} />
+          <Box sx={{ height: "8rem" }} id="about" />
           <div className="container flex justify-center content-center">
             <Grid
               spacing={3}
@@ -28,7 +28,7 @@ function Aboutme() {
                 <div className="m-2 container flex justify-center content-center">
                   <p className="text-base font-semibold indent-8 leading-relaxed ">
                     Hello! My name is{" "}
-                    <span className="text-purple underline decoration-purple decoration-4">
+                    <span className="text-purple underline decoration-purple decoration-2">
                       Kevalin Srisakulpong
                     </span>{" "}
                     (Cherry). I was born and raised in Bangkok, Thailand. I'm
@@ -74,6 +74,7 @@ function Aboutme() {
               </Grid>
             </Grid>
           </div>
+
           <Box sx={{ height: "15rem" }}></Box>
         </Stack>
       </div>
