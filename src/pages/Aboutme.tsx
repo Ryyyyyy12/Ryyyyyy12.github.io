@@ -1,5 +1,5 @@
 import { Box, Grid, Stack } from "@mui/material";
-import { SKILLS, TOOLS, FRAMEWORKS } from "../shared/skills";
+import { LANGUAGES, TOOLS, FRAMEWORKS } from "../shared/skills";
 import LogoList from "../components/LogoList";
 import UpButton from "../components/UpButton";
 
@@ -19,7 +19,7 @@ function Aboutme() {
               <Grid item xs={10} md={4}>
                 <div className="container flex justify-center content-center">
                   <img
-                    src="/assets/images/profileimg.jpg"
+                    src="./assets/images/profileimg.jpg"
                     className="w-72 rounded-full shadow-2xl"
                   ></img>
                 </div>
@@ -54,9 +54,9 @@ function Aboutme() {
             >
               <Grid item xs={10} md={4} lg={3}>
                 <h4 className="m-3" style={{ fontFamily: "Kanit" }}>
-                  Technical Skills
+                  Languages
                 </h4>
-                <LogoList props={SKILLS} />
+                <LogoList props={LANGUAGES} />
               </Grid>
 
               <Grid item xs={10} md={4} lg={3}>
