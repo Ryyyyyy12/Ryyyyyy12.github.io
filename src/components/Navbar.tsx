@@ -22,7 +22,7 @@ const Navbar = () => {
         alignItems="center"
         spacing={2}
       >
-        <img src="/assets/images/cherry.png" className="w-10 ml-2" />
+        <img src="./assets/images/cherry.png" className="w-10 ml-2" />
         <div className="hidden md:block ">
           <Stack direction="row" spacing={2}>
             <button>

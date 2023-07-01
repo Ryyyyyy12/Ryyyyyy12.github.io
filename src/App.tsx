@@ -1,20 +1,25 @@
-import React from "react";
-
 import "./App.css";
-import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import Aboutme from "./pages/Aboutme";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
-import UpButton from "./components/UpButton";
 import Contact from "./pages/Contact";
 import RsNavbar from "./components/RsNavbar";
+import { useTheme } from "@mui/material/styles";
 
 function App() {
+  const theme = useTheme();
+  console.log(theme.palette.mode);
+
   return (
     <BrowserRouter>
-      <div>
+      <div
+        className={`${
+          theme.palette.mode === "dark" ? "bg-bgdark" : "bg-white"
+        }`}
+      >
         <RsNavbar />
         <Home />
         <Aboutme />
