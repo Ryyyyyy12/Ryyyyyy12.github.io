@@ -2,7 +2,6 @@ import { DarkMode, LightModeOutlined, MenuRounded } from "@mui/icons-material";
 import React, { useContext, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./RsNavbar.css";
-import IconButton from "@mui/material/IconButton";
 import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "./ToggleColorMode";
 
@@ -19,13 +18,13 @@ function RsNavbar() {
 
   return (
     <nav className="flex w-screen bg-transparent fixed m-3 items-center">
-      <a>
+      <button>
         <img
           src="./assets/images/cherry.png"
           className="w-10 ml-2"
           alt="Logo"
         />
-      </a>
+      </button>
       <div className=" absolute right-12">
         <button
           className={`${
@@ -58,9 +57,11 @@ function RsNavbar() {
             }`}
           >
             <li className="m-2 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
-              <a onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}>
+              <button
+                onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
+              >
                 About
-              </a>
+              </button>
             </li>
           </Link>
 
@@ -72,9 +73,11 @@ function RsNavbar() {
             }`}
           >
             <li className="m-2 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
-              <a onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}>
+              <button
+                onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
+              >
                 Projects
-              </a>
+              </button>
             </li>
           </Link>
 
@@ -86,14 +89,15 @@ function RsNavbar() {
             }`}
           >
             <li className="m-2 font-semibold text-base transition ease-in-out hover:text-red hover:underline underline-offset-8 decoration-wavy duration-300">
-              <a onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}>
+              <button
+                onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
+              >
                 Contact
-              </a>
+              </button>
             </li>
           </Link>
 
-          <a
-            href=""
+          <button
             onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
             className="no-underline "
           >
@@ -104,7 +108,7 @@ function RsNavbar() {
             >
               Resume
             </li>
-          </a>
+          </button>
         </ul>
       </div>
     </nav>

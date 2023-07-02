@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid } from "@mui/material";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
@@ -13,6 +12,7 @@ const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
     backgroundColor: theme.palette.common.black,
   },
 }));
+
 function LogoList({ props }: any) {
   return (
     <div>
@@ -22,6 +22,7 @@ function LogoList({ props }: any) {
             <Grid item xs={4} key={el.id} sx={{ mt: "1.5rem" }}>
               <BootstrapTooltip title={el.name}>
                 <img
+                  alt={el.name}
                   src={el.logo}
                   className="w-12 transition duration-300 ease-in-out hover:scale-125"
                 ></img>
