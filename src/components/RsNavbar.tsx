@@ -1,11 +1,4 @@
-// RsNavbar.js
-import {
-  DarkMode,
-  DarkModeOutlined,
-  LightMode,
-  LightModeOutlined,
-  MenuRounded,
-} from "@mui/icons-material";
+import { DarkMode, LightModeOutlined, MenuRounded } from "@mui/icons-material";
 import React, { useContext, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./RsNavbar.css";
@@ -33,14 +26,28 @@ function RsNavbar() {
           alt="Logo"
         />
       </a>
-      <button
-        className="absolute right-12 md:hidden transition ease-in-out duration-300 hover:text-red hover:scale-125 "
-        onClick={() => {
-          setIsExpanded(!isExpanded);
-        }}
-      >
-        <MenuRounded sx={{ fontSize: "30px" }} />
-      </button>
+      <div className=" absolute right-12">
+        <button
+          className={`${
+            theme.palette.mode === "dark" ? "text-white " : "text-black"
+          } md:hidden transition ease-in-out duration-300  hover:scale-125 `}
+          onClick={() => {
+            setIsExpanded(!isExpanded);
+          }}
+        >
+          <MenuRounded sx={{ fontSize: "30px" }} className="hover:text-red" />
+        </button>
+        <button
+          onClick={handleColorMode}
+          className="ml-5 transition ease-in-out duration-300  hover:scale-125 "
+        >
+          {theme.palette.mode === "dark" ? (
+            <LightModeOutlined className=" text-white text-base transition ease-in-out" />
+          ) : (
+            <DarkMode className="text-black  text-base transition ease-in-out " />
+          )}
+        </button>
+      </div>
       <div>
         <ul className={isExpanded ? "navExpanded" : "navNotEx"}>
           <Link
@@ -88,7 +95,7 @@ function RsNavbar() {
           <a
             href=""
             onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
-            className="no-underline"
+            className="no-underline "
           >
             <li
               className={`text-${
@@ -98,13 +105,6 @@ function RsNavbar() {
               Resume
             </li>
           </a>
-          <IconButton sx={{ ml: 1 }} onClick={handleColorMode} color="inherit">
-            {theme.palette.mode === "dark" ? (
-              <LightMode className="text-white text-base transition ease-in-out hover:text-purple duration-100" />
-            ) : (
-              <DarkMode className="text-black text-base transition ease-in-out hover:text-purple duration-100" />
-            )}
-          </IconButton>
         </ul>
       </div>
     </nav>

@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@mui/private-theming";
 import { createTheme } from "@mui/system";
 import React from "react";
-import RsNavbar from "./RsNavbar";
 import App from "../App";
 
 export const ColorModeContext = React.createContext({
