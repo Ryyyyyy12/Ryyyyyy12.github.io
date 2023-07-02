@@ -1,13 +1,15 @@
-import { ThemeProvider } from "@mui/private-theming";
-import { createTheme } from "@mui/system";
+import { ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import React from "react";
 import App from "../App";
 
 export const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
 });
+
 export default function ToggleColorMode() {
   const [mode, setMode] = React.useState<"light" | "dark">("light");
+
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
