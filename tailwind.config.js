@@ -15,6 +15,7 @@ module.exports = {
         purple: "#907ad6",
         cream: "#FFF9E8",
         bgdark: "#272833",
+        darkblue: "#1E1E1E",
       },
     },
     container: {

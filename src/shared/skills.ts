@@ -60,6 +60,11 @@ export const TOOLS = [
     name: "AndroidStudio",
     logo: "https://2.bp.blogspot.com/-tzm1twY_ENM/XlCRuI0ZkRI/AAAAAAAAOso/BmNOUANXWxwc5vwslNw3WpjrDlgs9PuwQCLcBGAsYHQ/s1600/pasted%2Bimage%2B0.png",
   },
+  {
+    id: 13,
+    name: "Cloudflare",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cloudflare_Logo.png/480px-Cloudflare_Logo.png",
+  },
 ];
 
 export const FRAMEWORKS = [

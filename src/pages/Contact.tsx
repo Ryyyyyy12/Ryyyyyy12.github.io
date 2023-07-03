@@ -1,11 +1,14 @@
 import { ArrowDownwardRounded } from "@mui/icons-material";
 import { Stack } from "@mui/material";
-import React from "react";
+import { useTheme } from "@mui/material/styles";
 
 function Contact() {
+  const theme = useTheme();
   return (
     <div
-      className="h-screen flex justify-center items-center"
+      className={`h-screen flex justify-center items-center ${
+        theme.palette.mode === "dark" ? "text-white" : "text-black"
+      }`}
       style={{ fontFamily: "Kanit" }}
       id="contact"
     >
