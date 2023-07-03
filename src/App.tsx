@@ -11,7 +11,7 @@ import { useTheme } from "@mui/material/styles";
 
 function App() {
   const theme = useTheme();
-  console.log(theme.palette.mode);
+  //console.log(theme.palette.mode);
 
   return (
     <BrowserRouter>
