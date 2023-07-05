@@ -62,7 +62,7 @@ function Aboutme() {
             theme.palette.mode === "dark" ? "text-white" : "text-black"
           }`}
         >
-          <h3 className="text-left pl-20">Education</h3>
+          <h3 className="text-center md:text-left">Education</h3>
           <Grid
             container
             spacing={2}
@@ -114,7 +114,7 @@ function Aboutme() {
             theme.palette.mode === "dark" ? "text-white" : "text-black"
           }`}
         >
-          <h3 className="text-left pl-20 pt-10 pb-10">Techs & Tools</h3>
+          <h3 className="text-center md:text-left p-5">Techs & Tools</h3>
           <Grid
             container
             spacing={3}
@@ -123,7 +123,7 @@ function Aboutme() {
           >
             <Grid item xs={10} md={4} lg={3}>
               <h4
-                className={`m-3 ${
+                className={`m-3 text-center ${
                   theme.palette.mode === "dark" ? "text-white" : "text-black"
                 }`}
                 style={{ fontFamily: "Kanit" }}
@@ -135,7 +135,7 @@ function Aboutme() {
 
             <Grid item xs={10} md={4} lg={3}>
               <h4
-                className={`m-3 ${
+                className={`m-3 text-center ${
                   theme.palette.mode === "dark" ? "text-white" : "text-black"
                 }`}
                 style={{ fontFamily: "Kanit" }}
@@ -147,7 +147,7 @@ function Aboutme() {
 
             <Grid item xs={10} md={4} lg={3}>
               <h4
-                className={`m-3 ${
+                className={`m-3 text-center${
                   theme.palette.mode === "dark" ? "text-white" : "text-black"
                 }`}
                 style={{ fontFamily: "Kanit" }}

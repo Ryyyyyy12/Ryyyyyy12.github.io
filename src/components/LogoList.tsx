@@ -19,12 +19,18 @@ function LogoList({ props }: any) {
       <Grid container spacing={2}>
         {props.map((el: any) => {
           return (
-            <Grid item xs={4} key={el.id} sx={{ mt: "1.5rem" }}>
+            <Grid
+              item
+              xs={4}
+              key={el.id}
+              sx={{ mt: "1.5rem" }}
+              className="flex justify-center"
+            >
               <BootstrapTooltip title={el.name}>
                 <img
                   alt={el.name}
                   src={el.logo}
-                  className="w-12 transition duration-300 ease-in-out hover:scale-125"
+                  className="object-contain w-12 transition duration-300 ease-in-out hover:scale-125"
                 ></img>
               </BootstrapTooltip>
             </Grid>

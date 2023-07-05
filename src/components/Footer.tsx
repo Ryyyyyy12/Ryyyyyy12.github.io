@@ -1,4 +1,4 @@
-import { EmailRounded, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import { EmailRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 function Footer() {

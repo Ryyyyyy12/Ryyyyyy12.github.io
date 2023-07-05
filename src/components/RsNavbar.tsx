@@ -27,18 +27,8 @@ function RsNavbar() {
       </button>
       <div className=" absolute right-12">
         <button
-          className={`${
-            theme.palette.mode === "dark" ? "text-white " : "text-black"
-          } md:hidden transition ease-in-out duration-300  hover:scale-125 `}
-          onClick={() => {
-            setIsExpanded(!isExpanded);
-          }}
-        >
-          <MenuRounded sx={{ fontSize: "30px" }} className="hover:text-red" />
-        </button>
-        <button
           onClick={handleColorMode}
-          className="ml-5 transition ease-in-out duration-300  hover:scale-125 "
+          className="transition ease-in-out duration-300  hover:scale-125 "
         >
           {theme.palette.mode === "dark" ? (
             <LightModeOutlined className=" text-white text-base transition ease-in-out" />
@@ -46,11 +36,21 @@ function RsNavbar() {
             <DarkMode className="text-black  text-base transition ease-in-out " />
           )}
         </button>
+        <button
+          className={`${
+            theme.palette.mode === "dark" ? "text-white " : "text-black"
+          } ml-5 md:hidden transition ease-in-out duration-300  hover:scale-125 `}
+          onClick={() => {
+            setIsExpanded(!isExpanded);
+          }}
+        >
+          <MenuRounded sx={{ fontSize: "30px" }} className="hover:text-red" />
+        </button>
       </div>
       <div>
         <ul className={isExpanded ? "navExpanded" : "navNotEx"}>
           <Link
-            to="#about"
+            to="/#about"
             smooth
             className={`no-underline ${
               theme.palette.mode === "dark" ? "text-white" : "text-black"
@@ -66,7 +66,7 @@ function RsNavbar() {
           </Link>
 
           <Link
-            to="#project"
+            to="/#project"
             smooth
             className={`no-underline ${
               theme.palette.mode === "dark" ? "text-white" : "text-black"
@@ -82,7 +82,7 @@ function RsNavbar() {
           </Link>
 
           <Link
-            to="#contact"
+            to="/#contact"
             smooth
             className={`no-underline ${
               theme.palette.mode === "dark" ? "text-white" : "text-black"

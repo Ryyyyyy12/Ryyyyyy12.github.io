@@ -1,17 +1,13 @@
 import "./App.css";
-
-import Home from "./pages/Home";
-import Aboutme from "./pages/Aboutme";
-import Projects from "./pages/Projects";
-import Footer from "./components/Footer";
-import { BrowserRouter } from "react-router-dom";
-import Contact from "./pages/Contact";
-import RsNavbar from "./components/RsNavbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
+import ProjectDetail from "./pages/ProjectDetail";
+import Footer from "./components/Footer";
+import RsNavbar from "./components/RsNavbar";
+import Main from "./pages/Main";
 
 function App() {
   const theme = useTheme();
-  //console.log(theme.palette.mode);
 
   return (
     <BrowserRouter>
@@ -21,10 +17,10 @@ function App() {
         }`}
       >
         <RsNavbar />
-        <Home />
-        <Aboutme />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/project-detail/:id" element={<ProjectDetail />} />
+        </Routes>
         <Footer />
       </div>
     </BrowserRouter>
