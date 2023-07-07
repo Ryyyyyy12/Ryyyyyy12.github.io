@@ -5,8 +5,10 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
+import { render } from "@testing-library/react";
 import { Link } from "react-router-dom";
 import { Card } from "reactstrap";
+import ToolComponent from "./ToolComponent";
 
 function ProjectCard({ el }: any) {
   return (
@@ -37,6 +39,7 @@ function ProjectCard({ el }: any) {
                   {el.description}
                 </span>
               </p>
+              {ToolComponent({ tools: el.tools })}
             </CardContent>
           </CardActionArea>
         </Card>

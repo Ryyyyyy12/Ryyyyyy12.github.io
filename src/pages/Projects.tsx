@@ -27,6 +27,7 @@ function Projects() {
           padding: {
             xs: "0 15% 0 15%",
             md: "0 10% 0 10%",
+            lg: "0 15% 0 15%",
           },
         }}
       >
