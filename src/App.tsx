@@ -5,6 +5,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Footer from "./components/Footer";
 import RsNavbar from "./components/RsNavbar";
 import Main from "./pages/Main";
+import ScrollToTopButton from "./components/ToTop";
 
 function App() {
   const theme = useTheme();
@@ -17,6 +18,7 @@ function App() {
         }`}
       >
         <RsNavbar />
+        <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/project-detail/:id" element={<ProjectDetail />} />

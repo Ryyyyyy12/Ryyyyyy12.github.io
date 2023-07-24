@@ -4,6 +4,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { DEV } from "../shared/projects";
 import ProjectCard from "../components/ProjectCard";
+
 function Projects() {
   const theme = useTheme();
   return (
