@@ -17,7 +17,7 @@ function RsNavbar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <nav className="flex w-screen bg-transparent fixed m-3 items-center">
+    <nav className="flex w-screen bg-transparent fixed m-3 items-center z-10">
       <button>
         <img
           src="./assets/images/cherry.png"
