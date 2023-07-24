@@ -1,11 +1,4 @@
-import {
-  Grid,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Typography,
-} from "@mui/material";
-import { render } from "@testing-library/react";
+import { Grid, CardActionArea, CardMedia, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Card } from "reactstrap";
 import ToolComponent from "./ToolComponent";
@@ -22,16 +15,22 @@ function ProjectCard({ el }: any) {
           style={{ borderRadius: "20px" }}
         >
           <CardActionArea className="w-100">
-            <CardMedia
-              component="img"
-              height="140"
-              image="./assets/images/comingsoon.png"
-              alt={el.title}
-              style={{
-                borderTopLeftRadius: "20px",
-                borderTopRightRadius: "20px",
-              }}
-            />
+            <div style={{ height: "140px" }}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={el.coverImg || "./assets/images/comingsoon.png"}
+                alt={el.title}
+                style={{
+                  borderTopLeftRadius: "20px",
+                  borderTopRightRadius: "20px",
+                  objectFit: "cover",
+                  height: "100%",
+                  width: "100%",
+                }}
+              />
+            </div>
+
             <CardContent>
               <h6 className="text-lg text-black">{el.title}</h6>
               <p className="h-10 text-slate-400 text-sm font-thin overflow-hidden overflow-ellipsis">

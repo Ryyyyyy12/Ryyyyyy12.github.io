@@ -10,7 +10,7 @@ const ToolComponent = ({ tools }: any) => {
       if (containerRef.current) {
         const container = containerRef.current;
         const containerWidth = container.offsetWidth;
-        const toolMinWidth = 60; // Minimum width of each tool (adjust as needed)
+        const toolMinWidth = 70; // Minimum width of each tool (adjust as needed)
         const maxTools = Math.floor(containerWidth / toolMinWidth);
         const displayedTools = tools.slice(0, maxTools);
         const isOverflowing = displayedTools.length < tools.length;

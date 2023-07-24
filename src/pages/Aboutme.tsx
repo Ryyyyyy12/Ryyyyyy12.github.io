@@ -147,7 +147,7 @@ function Aboutme() {
 
             <Grid item xs={10} md={4} lg={3}>
               <h4
-                className={`m-3 text-center${
+                className={`m-3 text-center ${
                   theme.palette.mode === "dark" ? "text-white" : "text-black"
                 }`}
                 style={{ fontFamily: "Kanit" }}
