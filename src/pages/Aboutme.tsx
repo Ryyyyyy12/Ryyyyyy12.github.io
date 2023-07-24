@@ -62,7 +62,7 @@ function Aboutme() {
             theme.palette.mode === "dark" ? "text-white" : "text-black"
           }`}
         >
-          <h3 className="text-center md:text-left">Education</h3>
+          <h3 className="text-md-left text-center ">Education</h3>
           <Grid
             container
             spacing={2}

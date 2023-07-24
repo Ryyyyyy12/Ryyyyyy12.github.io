@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material/styles";
 import React, { useState, useEffect, useRef } from "react";
 
 const ToolComponent = ({ tools }: any) => {
@@ -5,6 +6,7 @@ const ToolComponent = ({ tools }: any) => {
   const [toolsToDisplay, setToolsToDisplay] = useState<string[]>([]);
   const [isOverflowing, setIsOverflowing] = useState(false);
 
+  const theme = useTheme();
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
@@ -29,17 +31,22 @@ const ToolComponent = ({ tools }: any) => {
   }, [tools]);
 
   return (
-    <div ref={containerRef} className="flex flex-wrap">
+    <div
+      ref={containerRef}
+      className={`"flex flex-wrap" ${
+        theme.palette.mode === "dark" ? "text-white" : "text-black"
+      }`}
+    >
       {toolsToDisplay.map((tool, index) => (
         <span
           key={index}
-          className="inline-block border border-black rounded-full font-thin px-2 py-1 text-xs text-gray-700 mr-1"
+          className="inline-block border rounded-full font-thin px-2 py-1 text-xs  mr-1"
         >
           {tool}
         </span>
       ))}
       {isOverflowing && (
-        <span className="inline-block border border-black rounded-full font-thin px-2 py-1 text-xs text-gray-700">
+        <span className="inline-block border rounded-full font-thin px-2 py-1 text-xs ">
           ...
         </span>
       )}

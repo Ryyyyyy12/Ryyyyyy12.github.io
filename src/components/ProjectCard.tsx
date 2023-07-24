@@ -2,8 +2,9 @@ import { Grid, CardActionArea, CardMedia, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Card } from "reactstrap";
 import ToolComponent from "./ToolComponent";
-
+import { useTheme } from "@mui/material/styles";
 function ProjectCard({ el }: any) {
+  const theme = useTheme();
   return (
     <Grid item xs={12} md={3}>
       <Link
@@ -11,7 +12,11 @@ function ProjectCard({ el }: any) {
         style={{ textDecoration: "none", height: "100%" }}
       >
         <Card
-          className="drop-shadow-xl transition ease-in-out duration-20 hover:scale-105 border-0"
+          className={`drop-shadow-xl transition ease-in-out duration-20 hover:scale-105 border-0 ${
+            theme.palette.mode === "dark"
+              ? "bg-black text-white"
+              : "bg-white text-black"
+          }`}
           style={{ borderRadius: "20px" }}
         >
           <CardActionArea className="w-100">
@@ -32,7 +37,7 @@ function ProjectCard({ el }: any) {
             </div>
 
             <CardContent>
-              <h6 className="text-lg text-black">{el.title}</h6>
+              <h6 className="text-lg">{el.title}</h6>
               <p className="h-10 text-slate-400 text-sm font-thin overflow-hidden overflow-ellipsis">
                 <span className="block max-h-10 line-clamp-2">
                   {el.description}
