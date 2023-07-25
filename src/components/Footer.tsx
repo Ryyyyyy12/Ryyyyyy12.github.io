@@ -5,7 +5,7 @@ function Footer() {
   const theme = useTheme();
   return (
     <div
-      className={`w-screen ${
+      className={`${
         theme.palette.mode === "dark" ? "bg-darkblue" : "bg-cream"
       }`}
     >

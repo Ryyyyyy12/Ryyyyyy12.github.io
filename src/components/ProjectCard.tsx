@@ -20,11 +20,14 @@ function ProjectCard({ el }: any) {
           style={{ borderRadius: "20px" }}
         >
           <CardActionArea className="w-100">
-            <div style={{ height: "140px" }}>
+            <div style={{ height: "25vh" }}>
               <CardMedia
                 component="img"
                 height="140"
-                image={el.coverImg || "./assets/images/comingsoon.png"}
+                image={
+                  el.coverImg ||
+                  "https://www.ctvnews.ca/polopoly_fs/1.4692108.1574174140!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg"
+                }
                 alt={el.title}
                 style={{
                   borderTopLeftRadius: "20px",
