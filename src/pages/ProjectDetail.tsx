@@ -2,8 +2,10 @@ import { useTheme } from "@mui/material/styles";
 import { useParams } from "react-router-dom";
 import { DEV } from "../shared/projects";
 import { Grid, Stack, Typography } from "@mui/material";
+import { useScroll } from "../util/scroll";
 
 function ProjectDetail() {
+  useScroll();
   const theme = useTheme();
   const { id } = useParams();
   const projectId = id ? parseInt(id) : null;
@@ -107,10 +109,7 @@ function ProjectDetail() {
                   target="_blank" // Add this attribute to open the link in a new tab
                   rel="noopener noreferrer" // Recommended for security reasons
                 >
-                  <button
-                    className="border rounded-full border-0 bg-gray-700 w-auto h-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 text-white"
-                    style={{ marginRight: "20px" }}
-                  >
+                  <button className="border rounded-full border-0 bg-gray-700 w-auto h-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 text-white">
                     <p
                       className="text-sm m-2 px-1"
                       style={{ fontFamily: "Kanit" }}
