@@ -7,6 +7,7 @@ import ProjectCard from "../components/ProjectCard";
 
 function Projects() {
   const theme = useTheme();
+
   return (
     <div id="project">
       <div className="container content-center">

@@ -6,7 +6,7 @@ function Home() {
   const theme = useTheme();
   return (
     <div
-      style={{ fontFamily: "Kanit", height: "100vh" }}
+      style={{ fontFamily: "inherit", height: "100vh" }}
       className="container mx-auto flex justify-center content-center"
       id="home"
     >
@@ -37,7 +37,7 @@ function Home() {
             theme.palette.mode === "dark" ? "text-white" : "text-black"
           }`}
         >
-          <button className="rounded-lg border-2 border-dashed border-red w-36 h-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 hover:text-white">
+          <button className="rounded-full border-2 border-dashed border-red w-36 h-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 hover:text-white">
             <p className="text-sm mt-1">Reach out!</p>
           </button>
         </Link>

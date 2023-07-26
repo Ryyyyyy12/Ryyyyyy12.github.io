@@ -3,8 +3,19 @@ import { useParams } from "react-router-dom";
 import { DEV } from "../shared/projects";
 import { Grid, Stack, Typography } from "@mui/material";
 import { useScroll } from "../util/scroll";
+import { useState, useEffect } from "react";
+import LoadingPage from "./LoadingPage";
 
 function ProjectDetail() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for 2 seconds
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   useScroll();
   const theme = useTheme();
   const { id } = useParams();
@@ -14,8 +25,11 @@ function ProjectDetail() {
   //   console.log(DEV);
   //   console.log(id);
   //   console.log(projectData);
-
+  if (isLoading) {
+    return <LoadingPage />;
+  }
   // Check if projectData is undefined
+
   if (!projectData) {
     return (
       <div className="h-screen">
