@@ -24,7 +24,7 @@ function LogoList({ props }: any) {
               xs={4}
               key={el.id}
               sx={{ mt: "1.5rem" }}
-              className="flex justify-center"
+              className="flex justify-center "
             >
               <BootstrapTooltip title={el.name}>
                 <img

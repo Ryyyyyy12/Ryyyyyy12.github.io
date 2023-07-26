@@ -2,6 +2,7 @@ import { Box, Divider, Grid, Stack } from "@mui/material";
 import { LANGUAGES, TOOLS, FRAMEWORKS } from "../shared/skills";
 import LogoList from "../components/LogoList";
 import { useTheme } from "@mui/material/styles";
+
 function Aboutme() {
   const theme = useTheme();
   return (
@@ -109,8 +110,8 @@ function Aboutme() {
 
         <div
           className={`${
-            theme.palette.mode === "dark" ? "bg-darkblue" : "bg-cream"
-          } text-base font-medium leading-relaxed pb-5 ${
+            theme.palette.mode === "dark" ? "bg-black" : "bg-white"
+          } bg-opacity-50  text-base font-medium leading-relaxed pb-5 ${
             theme.palette.mode === "dark" ? "text-white" : "text-black"
           }`}
         >

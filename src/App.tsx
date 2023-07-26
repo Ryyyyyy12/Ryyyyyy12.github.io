@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import RsNavbar from "./components/RsNavbar";
 import Main from "./pages/Main";
 import ScrollToTopButton from "./components/ToTop";
+import ShineCursor from "./components/ShineCursor";
 
 function App() {
   const theme = useTheme();
@@ -14,15 +15,23 @@ function App() {
     <BrowserRouter>
       <div
         className={`${
-          theme.palette.mode === "dark" ? "bg-bgdark" : "bg-white"
+          theme.palette.mode === "dark" ? "noisyDark " : "noisyLight"
         }`}
       >
-        <RsNavbar />
-        <ScrollToTopButton />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/project-detail/:id" element={<ProjectDetail />} />
-        </Routes>
+        <ShineCursor />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <RsNavbar />
+          <ScrollToTopButton />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/project-detail/:id" element={<ProjectDetail />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

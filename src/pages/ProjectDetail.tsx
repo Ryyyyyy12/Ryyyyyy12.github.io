@@ -33,9 +33,9 @@ function ProjectDetail() {
   return (
     <div className="container pt-5 p-lg-5 ">
       <div
-        className={`${
-          theme.palette.mode === "dark" ? "bg-drak" : "bg-white"
-        } text-${theme.palette.mode === "dark" ? "white" : "black"} `}
+        className={` text-${
+          theme.palette.mode === "dark" ? "white" : "black"
+        } `}
       >
         <div className="container p-lg-5">
           <h2 className=" text-center py-5" style={{ fontFamily: "Kanit" }}>
@@ -48,7 +48,7 @@ function ProjectDetail() {
                   src={
                     projectData.coverImg
                       ? `.${projectData.coverImg}`
-                      : "../assets/images/comingsoon.png"
+                      : "https://www.ctvnews.ca/polopoly_fs/1.4692108.1574174140!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg"
                   }
                   alt={projectData.title}
                   style={{
@@ -74,7 +74,9 @@ function ProjectDetail() {
                   <div key={index} className="inline-block p-1">
                     <span
                       key={index}
-                      className="inline-block border rounded-full font-thin px-2 py-1 text-xs mr-1"
+                      className={`inline-block border rounded-full font-thin px-2 py-1 text-sm mr-1 border-${
+                        theme.palette.mode === "dark" ? "white" : "black"
+                      }`}
                     >
                       {tool}
                     </span>
@@ -103,13 +105,13 @@ function ProjectDetail() {
                 <a
                   key={index}
                   href={url}
-                  className={`"text-black" ${
+                  className={`"text-black p-2  " ${
                     theme.palette.mode === "dark" ? "text-white" : "text-black"
                   }`}
                   target="_blank" // Add this attribute to open the link in a new tab
                   rel="noopener noreferrer" // Recommended for security reasons
                 >
-                  <button className="border rounded-full border-0 bg-gray-700 w-auto h-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 text-white">
+                  <button className="rounded-full bg-gray-700 w-auto h-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-red duration-300 text-white">
                     <p
                       className="text-sm m-2 px-1"
                       style={{ fontFamily: "Kanit" }}

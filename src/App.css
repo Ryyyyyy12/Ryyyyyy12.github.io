@@ -44,3 +44,34 @@
     background-color: #272833;
   }
 }
+.shine {
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(248, 126, 110, 0.322) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+.noisyDark {
+  background-image: radial-gradient(
+      circle at 67% 46%,
+      rgba(0, 13, 41, 0.54),
+      rgba(21, 26, 35, 1)
+    ),
+    url(/public/assets/images/noise.svg);
+}
+
+.noisyLight {
+  background-image: radial-gradient(
+      circle at 67% 46%,
+      rgba(255, 227, 227, 0.48),
+      rgba(255, 255, 255, 1)
+    ),
+    url(/public/assets/images/noise.svg);
+}
