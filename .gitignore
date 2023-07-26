@@ -25,4 +25,4 @@ yarn-error.log*
 # Ignore
 src/shared/projects.ts
 src/shared/skills.ts
-public/assets/images/projectImg
+public/assets/images
