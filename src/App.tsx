@@ -23,6 +23,7 @@ function App() {
   if (isLoading) {
     return <LoadingPage />;
   }
+
   return (
     <BrowserRouter>
       <div
@@ -43,8 +44,8 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/project-detail/:id" element={<ProjectDetail />} />
           </Routes>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </BrowserRouter>
   );

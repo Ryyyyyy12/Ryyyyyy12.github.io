@@ -44,6 +44,12 @@
     background-color: #272833;
   }
 }
+.shine-cursor-container {
+  pointer-events: none; /* To prevent the cursor container from capturing mouse events */
+  z-index: 0;
+  position: fixed; /* Keep the cursor container fixed on the screen */
+}
+
 .shine {
   height: 500px;
   width: 500px;
@@ -55,7 +61,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
+  position: absolute; /* Keep the inner Shine element as absolute */
 }
 
 .noisyDark {
@@ -64,7 +70,7 @@
       rgba(0, 13, 41, 0.54),
       rgba(21, 26, 35, 1)
     ),
-    url(/public/assets/images/noise.svg);
+    url(/public/assets/images/noise.png);
 }
 
 .noisyLight {
@@ -73,5 +79,5 @@
       rgba(255, 227, 227, 0.48),
       rgba(255, 255, 255, 1)
     ),
-    url(/public/assets/images/noise.svg);
+    url(/public/assets/images/noise.png);
 }

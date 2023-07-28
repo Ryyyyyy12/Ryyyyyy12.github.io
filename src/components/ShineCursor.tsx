@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const ShineCursor = () => {
+const ShineCursor: React.FC = () => {
   const [position, setPosition] = useState({ left: 0, top: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e: any) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setPosition({
-        left: e.pageX - 250,
-        top: e.pageY - 250,
+        left: e.clientX - 250,
+        top: e.clientY - 250,
       });
     };
 
@@ -20,13 +20,14 @@ const ShineCursor = () => {
 
   return (
     <div
-      className="shine"
+      className="shine-cursor-container"
       style={{
         left: position.left,
         top: position.top,
-        zIndex: 0,
       }}
-    ></div>
+    >
+      <div className="shine"></div>
+    </div>
   );
 };
 
