@@ -22,7 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignore
-src/shared/projects.ts
-src/shared/skills.ts
+
+# Ignore 
 public/assets/images
+src/shared
+
