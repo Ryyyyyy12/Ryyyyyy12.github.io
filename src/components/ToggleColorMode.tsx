@@ -8,7 +8,12 @@ export const ColorModeContext = React.createContext({
 });
 
 export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState<"light" | "dark">("light");
+  const prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const [mode, setMode] = React.useState<"light" | "dark">(
+    prefersDarkMode ? "dark" : "light"
+  );
 
   const colorMode = React.useMemo(
     () => ({
