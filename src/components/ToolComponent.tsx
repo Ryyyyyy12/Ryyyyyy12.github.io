@@ -40,13 +40,19 @@ const ToolComponent = ({ tools }: any) => {
       {toolsToDisplay.map((tool, index) => (
         <span
           key={index}
-          className="inline-block border rounded-full font-thin px-2 py-1 text-xs  mr-1"
+          className={`inline-block border-0 ${
+            theme.palette.mode === "dark" ? "bg-bgdark" : "bg-gray-100"
+          } rounded-full font-thin px-2 py-1 text-xs  mr-1`}
         >
           {tool}
         </span>
       ))}
       {isOverflowing && (
-        <span className="inline-block border rounded-full font-thin px-2 py-1 text-xs ">
+        <span
+          className={`inline-block border-0 ${
+            theme.palette.mode === "dark" ? "bg-bgdark" : "bg-gray-100"
+          } rounded-full font-thin px-2 py-1 text-xs  mr-1`}
+        >
           ...
         </span>
       )}
