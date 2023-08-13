@@ -1,0 +1,20 @@
+version: '3.5'  # docker-compose version
+
+services:
+  web:
+    image: nginx:stable
+    container_name: ryy-port
+    hostname: ryy-port
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - type: bind
+        source: ./build
+        target: /usr/share/nginx/html
+        read_only: true
+    restart: unless-stopped
+    logging:
+      driver: none
+
+
