@@ -7,28 +7,15 @@ import RsNavbar from "./components/RsNavbar";
 import Main from "./pages/Main";
 import ScrollToTopButton from "./components/ToTop";
 import ShineCursor from "./components/ShineCursor";
-import { useEffect, useState } from "react";
-import LoadingPage from "./pages/LoadingPage";
 
 function App() {
   const theme = useTheme();
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading for 2 seconds
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
-  if (isLoading) {
-    return <LoadingPage />;
-  }
 
   return (
     <BrowserRouter>
       <div
         className={`${
-          theme.palette.mode === "dark" ? "noisyDark " : "noisyLight"
+          theme.palette.mode === "dark" ? "bg-bgdark" : "bg-white"
         }`}
       >
         <ShineCursor />

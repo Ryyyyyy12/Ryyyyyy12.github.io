@@ -1,21 +1,10 @@
 import { useTheme } from "@mui/material/styles";
 import { useParams } from "react-router-dom";
 import { DEV } from "../shared/projects";
-import { Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import { useScroll } from "../util/scroll";
-import { useState, useEffect } from "react";
-import LoadingPage from "./LoadingPage";
 
 function ProjectDetail() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading for 2 seconds
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
-
   useScroll();
   const theme = useTheme();
   const { id } = useParams();
@@ -25,9 +14,7 @@ function ProjectDetail() {
   //   console.log(DEV);
   //   console.log(id);
   //   console.log(projectData);
-  if (isLoading) {
-    return <LoadingPage />;
-  }
+
   // Check if projectData is undefined
 
   if (!projectData) {
@@ -52,9 +39,7 @@ function ProjectDetail() {
         } `}
       >
         <div className="container p-lg-5">
-          <h2 className=" text-center py-5" style={{ fontFamily: "Kanit" }}>
-            {projectData.title}
-          </h2>
+          <h2 className=" text-center py-5">{projectData.title}</h2>
           <Stack spacing={2} className="px-5">
             <Grid container spacing={5} className="p-md-5">
               <Grid item xs={12} sm={4} md={6}>
@@ -79,17 +64,15 @@ function ProjectDetail() {
                 md={6}
                 className="text-container p-md-5"
               >
-                <Typography style={{ wordWrap: "break-word" }}>
-                  {projectData.description}
-                </Typography>
+                <p className="font-thin">{projectData.description}</p>
                 <br />
-                <h5>TechStack</h5>
+                <h5 className="py-3">TechStack</h5>
                 {projectData.tools.map((tool, index) => (
                   <div key={index} className="inline-block p-1">
                     <span
                       key={index}
-                      className={`inline-block border rounded-full font-thin px-2 py-1 text-sm mr-1 border-${
-                        theme.palette.mode === "dark" ? "white" : "black"
+                      className={`inline-block  rounded-full font-thin px-2 py-1 text-sm mr-1 border-0 bg-${
+                        theme.palette.mode === "dark" ? "gray-700" : "gray-100"
                       }`}
                     >
                       {tool}
@@ -100,14 +83,14 @@ function ProjectDetail() {
             </Grid>
 
             {projectData.info && projectData.info.res && (
-              <>
-                <h5>Responsibilities</h5>
-                <ul className="list-disc">
+              <div className="container">
+                <h5 className="p-3">Responsibilities</h5>
+                <ul className="list-disc font-thin">
                   {projectData.info.res.map((el, index) => (
                     <li key={index}>{el}</li>
                   ))}
                 </ul>
-              </>
+              </div>
             )}
           </Stack>
           <div className="container py-5 p-md-5">

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div
       className={`${
-        theme.palette.mode === "dark" ? "bg-darkblue" : "bg-white"
+        theme.palette.mode === "dark" ? "bg-darkblue" : "bg-cream"
       }`}
     >
       <Stack
