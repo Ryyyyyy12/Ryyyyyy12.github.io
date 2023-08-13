@@ -9,14 +9,14 @@ function Projects() {
   const theme = useTheme();
 
   return (
-    <div id="project">
-      <div className="container content-center">
+    <div id="project" data-aos="fade-down">
+      <div className="container p-5">
         <h3
-          className={`p-5 text-center ${
+          className={`text-md-start text-center ${
             theme.palette.mode === "dark" ? "text-white" : "text-black"
           }`}
         >
-          Projects/Activities
+          📌 Projects
         </h3>
       </div>
 

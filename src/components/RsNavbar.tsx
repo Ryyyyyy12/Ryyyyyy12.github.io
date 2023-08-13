@@ -17,14 +17,22 @@ function RsNavbar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <nav className="flex w-screen bg-transparent fixed m-3 items-center z-10">
-      <button>
-        <img
-          src="./assets/images/cherry.png"
-          className="w-10 ml-2"
-          alt="Logo"
-        />
-      </button>
+    <nav
+      className="flex w-screen bg-transparent fixed m-3 items-center z-10"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-delay="2400"
+    >
+      <Link to="/#home">
+        <button>
+          <img
+            src="/assets/images/cherry.png"
+            className="w-10 ml-2"
+            alt="Logo"
+          />
+        </button>
+      </Link>
+
       <div className=" absolute right-12">
         <button
           onClick={handleColorMode}
@@ -101,11 +109,7 @@ function RsNavbar() {
             onClick={() => (isExpanded ? setIsExpanded(!isExpanded) : "")}
             className="no-underline "
           >
-            <li
-              className={`text-${
-                theme.palette.mode === "dark" ? "lightgreen" : "green"
-              } m-2 font-semibold text-base transition ease-in-out hover:text-purple duration-100`}
-            >
+            <li className="text-red m-2 font-semibold text-base transition ease-in-out hover:text-purple duration-100">
               Resume
             </li>
           </button>

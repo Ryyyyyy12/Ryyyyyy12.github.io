@@ -9,13 +9,13 @@ function Contact() {
       className={`h-screen flex justify-center items-center ${
         theme.palette.mode === "dark" ? "text-white" : "text-black"
       }`}
-      style={{ fontFamily: "Kanit" }}
       id="contact"
+      data-aos="fade-down"
     >
       <Stack justifyContent="center" alignItems="center" spacing={2}>
-        <h1>Get In Touch</h1>
+        <h2>Get In Touch</h2>
         <div className="w-6/12">
-          <p className="indent-8">
+          <p className="indent-8 font-thin">
             I'm looking for new opportunities, If you got a question, proposal,
             project or want to work together on something? Feel free to reach
             out.
